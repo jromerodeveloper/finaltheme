@@ -2,19 +2,21 @@
     <footer class="Footer">
         <section class="Footer-container">
             <div>
-                <nav class="SocialMedia">
-                    <ul>
-                        <li><a href="#" target="_blank">facebook</a></li>
-                        <li><a href="#" target="_blank">twitter</a></li>
-                        <li><a href="#" target="_blank">github</a></li>
-                        <li><a href="#" target="_blank">codeopen</a></li>
-                        <li><a href="#" target="_blank">gitlab</a></li>
-                    </ul>
-                </nav>
+                <?php
+                if(has_nav_menu('social_menu')):
+                    wp_nav_menu(array(
+                        'theme_location'=>'social_menu',
+                        'container'=>'nav',
+                        'container_class'=>'SocialMedia',
+                        'link_before'=>'<span class="sr-text">',
+                        'link_after'=>'</span>'
+                    ));
+                endif;
+                ?>
             </div>
             <div>
                 <p>
-                    &copy;<?php echo date('Y');?> Copyright
+                    &copy;<?php echo date('Y').__(' Derechos Reservados','finaltheme');?>
                     <a href="#" target="_blank">@jromero</a>
                 </p>
             </div>
