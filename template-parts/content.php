@@ -1,11 +1,17 @@
         <div class="Content-container">
             <main class="Main">    
-                <h2>Contenido Principal</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias optio repellat, velit rem corporis veritatis, nihil maxime vitae inventore quisquam quae eligendi tempore voluptas, nostrum accusantium perspiciatis corrupti voluptatum repellendus!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias optio repellat, velit rem corporis veritatis, nihil maxime vitae inventore quisquam quae eligendi tempore voluptas, nostrum accusantium perspiciatis corrupti voluptatum repellendus!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias optio repellat, velit rem corporis veritatis, nihil maxime vitae inventore quisquam quae eligendi tempore voluptas, nostrum accusantium perspiciatis corrupti voluptatum repellendus!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias optio repellat, velit rem corporis veritatis, nihil maxime vitae inventore quisquam quae eligendi tempore voluptas, nostrum accusantium perspiciatis corrupti voluptatum repellendus!</p>
-            </main>
-            <?php get_sidebar();?>
+                <?php
+                if(have_posts()):while(have_posts()):the_post();
+                    get_template_part('template-parts/content-main');
+                endwhile;
+                else:
+                    get_template_part('template-parts/content-none');
+                endif;
+                ?>
+            </main>            
+            <?php 
+            get_template_part('template-parts/pagination');
+            get_sidebar();
+            ?>
         </div>
     
