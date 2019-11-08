@@ -122,3 +122,10 @@ if(!function_exists('finaltheme_setup')):
 endif;
 
 add_action('after_setup_theme','finaltheme_setup');
+
+// require_once get_template_directory().'/inc/custom-admin.php';
+// require_once get_template_directory().'/inc/custom-description.php';
+// require_once get_template_directory().'/inc/custom-excerpt.php';
+require_once get_template_directory().'/inc/custom-header.php';
+// require_once get_template_directory().'/inc/custom-login.php';
+require_once get_template_directory().'/inc/customizer.php';

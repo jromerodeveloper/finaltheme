@@ -10,27 +10,11 @@
 <body <?php body_class();?>>
     <header class="Header">
         <section class="Header-container">
-            <div class="Logo">
-                <a href="<?php echo esc_url(home_url('/'));?>">Logo</a>
-            </div>
-            <button class="Panel-btn"><?php _e('Menú Principal','finaltheme');?></button>
-            <section class="Panel">
-                <?php
-                if(has_nav_menu('main_menu')):
-                    wp_nav_menu(array(
-                        'theme_location'=>'main_menu',
-                        'container'=>'nav',
-                        'container_class'=>'Menu'
-                    ));
-                else:?>
-                <nav class="Menu">
-                    <ul>
-                        <?php wp_list_pages('title_li');?>
-                    </ul>
-                </nav>
-                <?php
-                endif; ?>
-            </section>
+            <?php
+            get_template_part('template-parts/header-logo');
+            get_template_part('template-parts/header-menu');
+            ?>
         </section>
     </header>
+    <?php get_template_part('template-parts/header-custom');?>
     <section class="Content">
