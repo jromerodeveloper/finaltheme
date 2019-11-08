@@ -1,0 +1,1 @@
+<h2>aquí ira información de las entradas</h2>
