@@ -11,7 +11,18 @@ Tags: one-columnm,two-columns,right-sidebar,left-sidebar,full-width,flexible-hea
 Text Domain: finaltheme
 */
 
-html{
-    background-color:steelblue;
-    color: #fff;
-}
+@import 'css/reset.css';
+@import 'css/header.css';
+@import 'css/menu.css';
+@import 'css/grid_layout.css';
+@import 'css/footer.css';
+@import 'css/widgets.css';
+@import 'css/search_form.css';
+@import 'css/social_menu.css';
+@import 'css/post.css';
+@import 'css/pagination.css';
+@import 'css/comments.css';
+@import 'css/not_found.css';
+@import 'css/author.css';
+@import 'css/wp_custom_header.css';
+@import 'css/hero_image.css';
