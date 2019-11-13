@@ -1,0 +1,36 @@
+/* *******  Content  ****** */
+.Content-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 'main'
+                     'features'
+                      'sidebar';
+    grid-gap:1rem;
+    margin:0 auto;
+    max-width: var(--container-width);
+}
+
+.Main{ grid-area:main; }
+
+.Main p{ margin:1rem 0; }
+
+.Sidebar{ grid-area: sidebar; }
+
+.Pagination,
+.Comments{
+    background-color: var(--bg-alternate-color);
+    border:thin solid var(--border-color);
+    grid-area: features;
+    padding: 1rem;
+}
+
+@media screen and (min-width:64em){
+    .Content-container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 'main sidebar'
+                         'features sidebar';
+        margin: 1rem auto;
+    }
+}
