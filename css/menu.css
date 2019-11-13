@@ -1,0 +1,71 @@
+/* ****** Menu ******* */
+.Menu{
+    margin:0 auto;
+    padding-top: var(--header-height);
+    text-align: center;
+}
+.Menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.Menu li{ margin-left:0; }
+.Menu a{
+    color:var(--main-color);
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.Menu a:hover{
+    background-color: var(--main-color);
+    color:var(--bg-color);
+    font-weight: bold;
+}
+@media screen and (min-width:64em){
+    .Menu{
+        padding-top: 0;
+        width: 100%;
+    }
+    .Menu ul:not(.sub-menu){
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .Menu a{
+        border-top: medium solid transparent;
+        font-size: 1.5rem;
+        padding:0 .5rem;
+    }
+    .Menu a:hover{
+        background-color:transparent;
+        border-top:medium solid var(--bg-color);
+        color:var(--bg-color);
+    }
+}
+
+/* WordPress Submenu Classes */
+.sub-menu a{ font-size: .85rem; }
+
+@media screen and (min-width:64em){
+    .sub-menu{
+        position: absolute;
+        top:var(--header-height);
+        transition: all .3s ease-out;
+        background-color: var(--second-modal-color);
+        opacity:0;
+        visibility:hidden;
+    }
+    .sub-menu a{
+        border-top: medium solid transparent;
+        font-size: .85rem;
+        padding: 0 1rem;
+        text-align: left;
+    }
+    .menu-item-has-children{
+        position: relative;
+    }
+    .menu-item-has-children:hover>.sub-menu{
+        opacity: 1;
+        visibility: visible;
+    }
+}
