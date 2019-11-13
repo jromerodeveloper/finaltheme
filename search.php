@@ -1,9 +1,9 @@
 <?php get_header();?>
 <div class="Content-container">
     <main class="Main">
-        <div class="Search-Results">
+        <div class="Search-results">
             <h3><?php _e('Resultados para la búsqueda:','finaltheme');?></h3>
-            <mark><?php get_search_query();?></mark>
+            <mark><?php echo get_search_query();?></mark>
         </div>
         <?php
         if(have_posts()):while(have_posts()):the_post();
