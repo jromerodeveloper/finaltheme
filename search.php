@@ -1,7 +1,7 @@
 <?php get_header();?>
 <div class="Content-container">
     <main class="Main">
-        <div class="TermsResults">
+        <div class="Search-Results">
             <h3><?php _e('Resultados para la búsqueda:','finaltheme');?></h3>
             <mark><?php get_search_query();?></mark>
         </div>
