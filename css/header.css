@@ -1,0 +1,86 @@
+/* ***** Header & Panel Navigation ****** */
+.Header{
+    background-color: var(--second-color);
+    height: var(--header-height);
+    left:0;
+    line-height: var(--header-height);
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 999;
+}
+.Header-container{
+    margin:0 auto;
+    max-width: var(--container-width);
+    position: relative;
+}
+.Logo{
+    position: absolute;
+    z-index: 999;
+}
+.Logo a{
+    color:var(--main-color);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.Logo a:hover{
+    opacity: .75;
+}
+.Logo img{
+    height: var(--header-height);
+    padding: .25rem;
+    width:auto;
+}
+.Panel{
+    background-color: var(--second-modal-color);
+    bottom: 0;
+    left: 0;
+    overflow-y:auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition:transform .3s ease;
+    /* Menu sale de arriba */
+    transform:translate(0-100%);
+    /* Menu sale de la izquierda */
+    transform:translate(-100%,0);
+    /* Menu sale de abajo */
+    transform:translate(0,100%);
+    /* Menu sale de la derecha */
+    transform: translate(100%, 0);
+    width: 100%;
+    z-index: 998;
+}
+.is-active{transform: translate(0,0);}
+.Panel-btn{
+    position: absolute;
+    right: 0;
+    top: -.5rem;
+    z-index: 999;
+}
+.hamburger:focus{
+    border:0;
+    outline: 0;
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before{
+    background-color: var(--main-color);
+}
+@media screen and (min-width:64em){
+    .Header-container{ display:flex; }
+    .Logo{
+        position:static;
+        width: 20%;
+    }
+    .Panel{
+        background-color: transparent;
+        display: fex;
+        overflow-y:visible;
+        position: static;
+        transform: translate(0,0);
+        width: 80%;
+    }
+    .Panel-btn{ display:none; }
+}
