@@ -1,0 +1,21 @@
+.Pagination{
+    color:var(--second-color);
+}
+.Pagination nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.Pagination>*{
+    font-size: 4vw;
+}
+@media screen and (min-width:37.5em){
+    .Pagination>*{
+        font-size: 1.25rem;
+    }
+}
+.Pagination .current{
+    font-size: 2em;
+    font-weight: bold;
+}

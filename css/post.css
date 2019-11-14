@@ -1,0 +1,34 @@
+.PostCard{
+    background-color: var(--bg-alternate-color);
+    border:thin solid var(--border-color);
+    margin:0 auto 2rem;
+    max-width: calc(var(--container-width)/3);
+}
+.PostCard img{
+    height: auto;
+    width: 100%;
+}
+.PostCard figcaption{
+    padding: 1rem;
+}
+.PostCard h2{
+    font-size: 2rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+@media screen and (min-width:37.5em){
+    .PostCard{
+        max-width: calc(var(--container-width)/2);
+    }
+}
+@media screen and (min-width:64em){
+    .PostCard{
+        max-width: var(--container-width);
+    }
+}
+
+.PostContent{
+    background-color: var(--bg-alternate-color);
+    border:thin solid var(--border-color);
+    padding: 1rem;
+}
