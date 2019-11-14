@@ -1,0 +1,28 @@
+/* **** Author *** */
+.Author{
+    background-color: var(--bg-alternate-color);
+    border:thin solid var(--border-color);
+    padding:1rem;
+}
+.Author h3{
+    color:var(--second-color);
+    font-size:1.75rem;
+    margin-bottom: 2rem;
+    text-align:center;
+}
+.Author-info{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width:37.5em){
+    .Author-info{
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+.Author img{
+    border-radius: 50%;
+    margin-bottom:1em;
+    max-width: 150px;
+} 

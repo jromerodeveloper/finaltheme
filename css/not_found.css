@@ -1,0 +1,13 @@
+/* *** Not Found *** */
+.NotFound{
+    background-color: var(--bg-alternate-color);
+    border:thin solid var(--border-color);
+    font-size: 1.25rem;
+    padding:2rem;
+    text-align: center;
+}
+.NotFound .fa-frown{
+    display:block;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
