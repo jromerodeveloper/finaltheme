@@ -1,0 +1,10 @@
+/* **** Custom Editor *** */
+body#tinymce.wp-editor{
+    font-family: var(--main-font);
+}
+body#tinymce.wp-editor a{
+    color:var(--link-color);
+}
+bofy#tinymce.wp-editor a:hover{
+    color:var(--link-hover-color);
+}

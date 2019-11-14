@@ -2,7 +2,7 @@
 // https://codex.wordpress.org/Customizing_the_Login_Form
 if(!function_exists('finaltheme_login_scripts')):
     function finaltheme_login_scripts(){
-        wp_enqueue_style('custom-properties', get_stylesheet_directory_uri().'/css/custom_porperties.css', array(), '1.0.0', 'all');
+        wp_enqueue_style('custom-properties', get_stylesheet_directory_uri().'/css/custom_properties.css', array(), '1.0.0', 'all');
         wp_enqueue_style('login-page-css', get_template_directory_uri().'/css/login_page.css', array('custom-properties'), '1.0.0', 'all');
 
         wp_enqueue_script('jquery');
